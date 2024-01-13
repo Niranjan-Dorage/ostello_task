@@ -6,7 +6,7 @@ import '../../theme/app_color.dart';
 import '../../theme/app_font.dart';
 
 class Categories extends StatelessWidget {
-  const Categories({Key? key});
+  const Categories({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -89,7 +89,7 @@ class Categories extends StatelessWidget {
           children: [
             GridView.builder(
               shrinkWrap: true,
-              physics: NeverScrollableScrollPhysics(),
+              physics: const NeverScrollableScrollPhysics(),
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
               ),
@@ -105,23 +105,58 @@ class Categories extends StatelessWidget {
                   margin:
                       const EdgeInsets.symmetric(horizontal: 18, vertical: 50),
                   width: double.infinity,
-                  height: 121,
+                  height: 131,
                   decoration: BoxDecoration(
                       color: AppColorScheme().primaryColor,
                       borderRadius: BorderRadius.circular(20)),
                 ),
                 Row(
                   children: [
-                    Container(
-                      margin: EdgeInsets.only(top: 20),
-                      width: 164,
+                    SizedBox(
+                      width: 160,
                       child: Image(image: AssetImage(AssetName.girl)),
-                    )
+                    ),
+                    Column(
+                      children: [
+                        Container(
+                          margin: const EdgeInsets.only(top: 35, bottom: 16),
+                          child: Text(
+                            "Confused what next steps\n to take in your career?",
+                            style: FontThemeClass().medium(context,
+                                color: AppColorScheme().whiteColor,
+                                fontWeight: FontWeight.w600),
+                          ),
+                        ),
+                        ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: AppColorScheme().whiteColor,
+                              elevation: 0,
+                              padding: const EdgeInsets.all(0),
+                              foregroundColor: AppColorScheme().primaryColor,
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(
+                                    300), // Rounded corners
+                              ),
+                            ),
+                            onPressed: () {
+                              Navigator.pushNamed(context, "/categories");
+                            },
+                            child: const Center(
+                                child: SizedBox(
+                                    width: 198,
+                                    height: 30,
+                                    child: Center(
+                                        child: Text(
+                                      "Build your career roadmap",
+                                      style: TextStyle(fontSize: 12),
+                                    ))))),
+                      ],
+                    ),
                   ],
                 )
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
           ],
