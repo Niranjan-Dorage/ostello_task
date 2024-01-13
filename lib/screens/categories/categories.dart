@@ -19,17 +19,22 @@ class Categories extends StatelessWidget {
           children: [
             Row(
               children: [
-                Container(
-                  width: 40,
-                  height: 40,
-                  margin: const EdgeInsets.only(left: 16),
-                  decoration: BoxDecoration(
-                      color: AppColorScheme().whiteColor,
-                      borderRadius: BorderRadius.circular(100)),
-                  child: Icon(
-                    Icons.navigate_before_rounded,
-                    size: 25,
-                    color: AppColorScheme().primaryColor,
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pop(context);
+                  },
+                  child: Container(
+                    width: 40,
+                    height: 40,
+                    margin: const EdgeInsets.only(left: 16),
+                    decoration: BoxDecoration(
+                        color: AppColorScheme().whiteColor,
+                        borderRadius: BorderRadius.circular(100)),
+                    child: Icon(
+                      Icons.navigate_before_rounded,
+                      size: 25,
+                      color: AppColorScheme().primaryColor,
+                    ),
                   ),
                 ),
                 const SizedBox(
