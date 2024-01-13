@@ -28,9 +28,10 @@ class CategorieCard extends StatelessWidget {
                   fontWeight: FontWeight.w500),
             ),
           ),
+          const Spacer(),
           Center(
             child: SizedBox(
-              width: 150,
+              width: 140,
               child: Image(image: AssetImage(path)),
             ),
           )
