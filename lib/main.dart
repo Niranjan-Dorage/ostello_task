@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ostello_task/screens/categories.dart';
+import 'package:ostello_task/screens/categories/categories.dart';
 import 'package:ostello_task/screens/syllabus/syllabus.dart';
 
 void main() {
