@@ -37,4 +37,13 @@ class FontThemeClass {
       color: color ?? Colors.black,
     );
   }
+  TextStyle italicSmall(BuildContext ctx, {Color? color, FontWeight? fontWeight}) {
+    return TextStyle(
+      fontStyle: FontStyle.italic,
+      fontSize: 12,
+      fontFamily: 'Appfont-Medium',
+      fontWeight: fontWeight ?? FontWeight.w700,
+      color: color ?? Colors.black,
+    );
+  }
 }

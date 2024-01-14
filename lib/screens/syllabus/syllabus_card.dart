@@ -39,18 +39,20 @@ class SyllabusCard extends StatelessWidget {
                         width: 51,
                         height: 22,
                         margin: const EdgeInsets.only(right: 20, top: 12),
+                        padding: const EdgeInsets.all(1),
                         decoration: BoxDecoration(
                             color: AppColorScheme().whiteColor,
                             borderRadius: BorderRadius.circular(100)),
                         child: Row(
                           children: [
                             Padding(
-                              padding: const EdgeInsets.all(4),
+                              padding: const EdgeInsets.all(3),
                               child: Image(image: AssetImage(AssetName.coin)),
                             ),
                             Text(
                               "500",
                               style: TextStyle(
+                                  fontSize: 12,
                                   color: AppColorScheme().primaryColor),
                             )
                           ],
@@ -59,6 +61,7 @@ class SyllabusCard extends StatelessWidget {
                     ],
                   ),
                   Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Container(
                         width: 48,
@@ -75,7 +78,8 @@ class SyllabusCard extends StatelessWidget {
                         ),
                       ),
                       const Spacer(),
-                      SizedBox(
+                      Container(
+                          padding: const EdgeInsets.only(top: 3),
                           width: 20,
                           child: Image(image: AssetImage(AssetName.star))),
                       Padding(
@@ -167,8 +171,8 @@ class SyllabusCard extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.only(top: 5, left: 8),
                     child: Text(
-                      "200+ students enrolled",
-                      style: FontThemeClass().small(context,
+                      "200+ studentss enrolled",
+                      style: FontThemeClass().italicSmall(context,
                           fontWeight: FontWeight.w400, color: Colors.grey),
                     ),
                   ),

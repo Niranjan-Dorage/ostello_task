@@ -33,8 +33,10 @@ class Reviews extends StatelessWidget {
                     fontWeight: FontWeight.w400),
               ),
               const Spacer(),
-              SizedBox(
-                  width: 20, child: Image(image: AssetImage(AssetName.star))),
+              Container(
+                  padding: EdgeInsets.only(top: 3),
+                  width: 20,
+                  child: Image(image: AssetImage(AssetName.star))),
               Padding(
                 padding: const EdgeInsets.only(top: 5, right: 18, left: 6),
                 child: Text(

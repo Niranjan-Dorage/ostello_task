@@ -59,6 +59,20 @@ class Categories extends StatelessWidget {
               child: TextFormField(
                 cursorColor: AppColorScheme().primaryColor,
                 decoration: InputDecoration(
+                  suffixIcon: Container(
+                    padding: const EdgeInsets.only(left: 15, right: 18),
+                    height: 10,
+                    width: 10,
+                    child:
+                        const Image(image: AssetImage("assets/images/mic.png")),
+                  ),
+                  prefixIcon: Container(
+                    padding: const EdgeInsets.only(left: 22, right: 10),
+                    height: 10,
+                    width: 10,
+                    child: const Image(
+                        image: AssetImage("assets/images/search.png")),
+                  ),
                   contentPadding: const EdgeInsets.symmetric(
                     horizontal: 15,
                     vertical: 12,
