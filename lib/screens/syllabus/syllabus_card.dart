@@ -11,6 +11,9 @@ class SyllabusCard extends StatelessWidget {
     return SizedBox(
       width: double.infinity,
       child: Card(
+        shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.all(Radius.circular(24.0)),
+        ),
         elevation: 0,
         color: const Color(0XFFf4f4f4),
         child: Column(

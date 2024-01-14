@@ -34,7 +34,7 @@ class Reviews extends StatelessWidget {
               ),
               const Spacer(),
               Container(
-                  padding: EdgeInsets.only(top: 3),
+                  padding: const EdgeInsets.only(top: 3),
                   width: 20,
                   child: Image(image: AssetImage(AssetName.star))),
               Padding(

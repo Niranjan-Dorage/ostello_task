@@ -11,97 +11,108 @@ class Categories extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        toolbarHeight: 140,
-        backgroundColor: AppColorScheme().primaryColor,
-        automaticallyImplyLeading: false,
-        titleSpacing: 0,
-        title: Column(
-          children: [
-            Row(
-              children: [
-                GestureDetector(
-                  onTap: () {
-                    Navigator.pop(context);
-                  },
-                  child: Container(
-                    width: 40,
-                    height: 40,
-                    margin: const EdgeInsets.only(left: 16),
-                    decoration: BoxDecoration(
-                      color: AppColorScheme().whiteColor,
-                      borderRadius: BorderRadius.circular(100),
-                    ),
-                    child: Icon(
-                      Icons.navigate_before_rounded,
-                      size: 25,
-                      color: AppColorScheme().primaryColor,
-                    ),
-                  ),
-                ),
-                const SizedBox(
-                  width: 24,
-                ),
-                Text(
-                  "Categories",
-                  style: FontThemeClass().appBarText(
-                    context,
-                    color: AppColorScheme().whiteColor,
-                  ),
-                )
-              ],
-            ),
-            const SizedBox(
-              height: 14,
-            ),
-            Container(
-              margin: const EdgeInsets.symmetric(horizontal: 16),
-              child: TextFormField(
-                cursorColor: AppColorScheme().primaryColor,
-                decoration: InputDecoration(
-                  suffixIcon: Container(
-                    padding: const EdgeInsets.only(left: 15, right: 18),
-                    height: 10,
-                    width: 10,
-                    child:
-                        const Image(image: AssetImage("assets/images/mic.png")),
-                  ),
-                  prefixIcon: Container(
-                    padding: const EdgeInsets.only(left: 22, right: 10),
-                    height: 10,
-                    width: 10,
-                    child: const Image(
-                        image: AssetImage("assets/images/search.png")),
-                  ),
-                  contentPadding: const EdgeInsets.symmetric(
-                    horizontal: 15,
-                    vertical: 12,
-                  ),
-                  border: const OutlineInputBorder(
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(15),
-                    ),
-                    borderSide: BorderSide.none,
-                  ),
-                  fillColor: AppColorScheme().whiteColor,
-                  filled: true,
-                  focusColor: AppColorScheme().whiteColor,
-                  hintText: 'Search',
-                  hintStyle: FontThemeClass().medium(
-                    context,
-                    fontWeight: FontWeight.w400,
-                    color: Colors.grey,
-                  ),
-                ),
-              ),
-            ),
-          ],
-        ),
-      ),
       body: SingleChildScrollView(
         child: Column(
+          // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          // crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            Container(
+              padding: const EdgeInsets.only(top: 55),
+              decoration: const BoxDecoration(
+                  gradient: LinearGradient(
+                begin: Alignment(0.82, -0.57),
+                end: Alignment(-0.82, 0.57),
+                colors: [Color(0xFF7D23E0), Color(0xCC7D23E0)],
+              )),
+              child: Column(
+                children: [
+                  Row(
+                    children: [
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.pop(context);
+                        },
+                        child: Container(
+                          width: 40,
+                          height: 40,
+                          margin: const EdgeInsets.only(left: 16),
+                          decoration: BoxDecoration(
+                            color: AppColorScheme().whiteColor,
+                            borderRadius: BorderRadius.circular(100),
+                          ),
+                          child: Icon(
+                            Icons.navigate_before_rounded,
+                            size: 25,
+                            color: AppColorScheme().primaryColor,
+                          ),
+                        ),
+                      ),
+                      const SizedBox(
+                        width: 24,
+                      ),
+                      Text(
+                        "Categories",
+                        style: FontThemeClass().appBarText(
+                          context,
+                          color: AppColorScheme().whiteColor,
+                        ),
+                      )
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 14,
+                  ),
+                  Container(
+                    margin: const EdgeInsets.symmetric(horizontal: 16),
+                    child: TextFormField(
+                      cursorColor: AppColorScheme().primaryColor,
+                      decoration: InputDecoration(
+                        suffixIcon: Container(
+                          padding: const EdgeInsets.only(left: 15, right: 18),
+                          height: 10,
+                          width: 10,
+                          child: const Image(
+                              image: AssetImage("assets/images/mic.png")),
+                        ),
+                        prefixIcon: Container(
+                          padding: const EdgeInsets.only(left: 22, right: 10),
+                          height: 10,
+                          width: 10,
+                          child: const Image(
+                              image: AssetImage("assets/images/search.png")),
+                        ),
+                        contentPadding: const EdgeInsets.symmetric(
+                          horizontal: 15,
+                          vertical: 12,
+                        ),
+                        border: const OutlineInputBorder(
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(15),
+                          ),
+                          borderSide: BorderSide.none,
+                        ),
+                        fillColor: AppColorScheme().whiteColor,
+                        filled: true,
+                        focusColor: AppColorScheme().whiteColor,
+                        hintText:
+                            'Search for free videos, courses, skills & more...',
+                        hintStyle: FontThemeClass().medium(
+                          context,
+                          fontWeight: FontWeight.w400,
+                          color: Colors.grey,
+                        ),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 28,
+                  )
+                ],
+              ),
+            ),
             GridView.builder(
+              padding: const EdgeInsets.only(top: 10),
               shrinkWrap: true,
               physics: const NeverScrollableScrollPhysics(),
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
@@ -121,7 +132,11 @@ class Categories extends StatelessWidget {
                   width: double.infinity,
                   height: 131,
                   decoration: BoxDecoration(
-                      color: AppColorScheme().primaryColor,
+                      gradient: const LinearGradient(
+                        begin: Alignment(0.00, -1.00),
+                        end: Alignment(0, 1),
+                        colors: [Color(0xFF7D23E0), Color(0xCC7D23E0)],
+                      ),
                       borderRadius: BorderRadius.circular(20)),
                 ),
                 Row(
